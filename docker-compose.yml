@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  app:
+    tty: true
+    image: node:20-alpine
+    working_dir: /app/portfolio
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./portfolio:/app/portfolio
+    command: ash entrypoint.sh
